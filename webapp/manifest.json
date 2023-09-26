@@ -70,14 +70,7 @@
             }
         },
         "models": {
-            "i18n": {
-                "type": "sap.ui.model.resource.ResourceModel",
-                "uri": "<uriRelativeToManifest>"
-            },
-            "": {
-                "dataSource": "<dataSourceAlias>",
-                "settings": {}
-            }
+           
         },
         "rootView": "<rootView>",
         "handleValidation": false,

@@ -22,12 +22,12 @@ sap.ui.define([
              this.getView().setModel(i18nModel, "i18n");
         },
         onClick: function(){
-             // i18n model
-             var oBundle = this.getView().getModel("i18n").getResourceBundle();
-             var sRecipient = this.getView().getModel().getProperty("/recipient/name");
-             var sMsg = oBundle.getText("helloMsg", [sRecipient]);
-             // show message
-             MessageToast.show(sMsg);
+            var oBundle = this.getView().getModel("i18n").getResourceBundle();
+            var sRecipient = this.getView().getModel().getProperty("/recipient/name");
+            var sMsg = oBundle.getText("helloMsg", [sRecipient]);
+            console.log(sMsg)
+            // show message
+            MessageToast.show(sMsg);
     
         }
     });
