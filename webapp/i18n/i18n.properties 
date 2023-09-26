@@ -1,6 +1,4 @@
-#App Descriptor
-appTitle = Hello UI5 App
-appDescription= A simple test app to learn UI5
+
 
 showHelloButtonText=Say Hello
 helloMsg=Hello {0}

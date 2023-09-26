@@ -11,5 +11,5 @@ controllerName="sap.ui.demo.walkthrough.controller.App"
     description ="Hello {/recipient/name}"
     valueLiveUpdate = "true"
     width= "60%"/>
-   <Text text ="Hello UI5 again!"></Text>
+   <!-- <Text text ="Hello UI5 again!"></Text> -->
 </mvc:View>
