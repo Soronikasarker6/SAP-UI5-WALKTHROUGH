@@ -15,9 +15,9 @@ sap.ui.define([
           MessageToast.show(sMsg);
        },
        onOpenDialog : function () {
-
            // create dialog lazily
            if (!this.pDialog) {
+            //create async XML fragments
                this.pDialog = this.loadFragment({
                    name: "sap.ui.demo.walkthrough.view.HelloDialog"
                });
@@ -25,6 +25,9 @@ sap.ui.define([
            this.pDialog.then(function(oDialog) {
                oDialog.open();
            });
-       }
+       },
+       onCloseDialog : function () {
+        this.byId("helloDialog").close();
+    }
     });
  });
