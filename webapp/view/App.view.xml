@@ -3,13 +3,34 @@ controllerName="sap.ui.demo.walkthrough.controller.App"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc"
    >
-   <Button
+ <Shell>
+   <App>
+   <pages>
+   <Page title="{i18n>appTitleText}">
+   <content>
+   <Panel 
+   headerText="{i18n>appHeaderText}"
+   class="sapUiResponsiveMargin"
+   width="auto">
+   <content>
+     <Button
    text="{i18n>showHelloButtonText}" 
-   press=".onClick"/>
+   press=".onClick"
+   class="sapUiSmallMarginEnd"
+   />
    <Input
     value="{/recipient/name}"
     description ="Hello {/recipient/name}"
     valueLiveUpdate = "true"
     width= "60%"/>
-   <!-- <Text text ="Hello UI5 again!"></Text> -->
+   <Text text ="Hello {/recipient/name}"
+   class="sapUiSmallMargin"></Text>
+   </content>
+   </Panel>
+   </content>
+   </Page>
+   </pages>
+   </App>
+   </Shell>
+
 </mvc:View>
