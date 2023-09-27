@@ -3,30 +3,12 @@ controllerName="sap.ui.demo.walkthrough.controller.App"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc"
    >
- <Shell>
+ <Shell class="myAppDemoWT">
    <App>
    <pages>
    <Page title="{i18n>appTitleText}">
    <content>
-   <Panel 
-   headerText="{i18n>appHeaderText}"
-   class="sapUiResponsiveMargin"
-   width="auto">
-   <content>
-     <Button
-   text="{i18n>showHelloButtonText}" 
-   press=".onClick"
-   class="sapUiSmallMarginEnd"
-   />
-   <Input
-    value="{/recipient/name}"
-    description ="Hello {/recipient/name}"
-    valueLiveUpdate = "true"
-    width= "60%"/>
-   <Text text ="Hello {/recipient/name}"
-   class="sapUiSmallMargin"></Text>
-   </content>
-   </Panel>
+			<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.HelloPanel"/>
    </content>
    </Page>
    </pages>
