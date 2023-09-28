@@ -4,16 +4,17 @@ controllerName="sap.ui.demo.walkthrough.controller.App"
    xmlns:mvc="sap.ui.core.mvc"
    >
  <Shell class="myAppDemoWT">
-   <App>
-   <pages>
+  <App class="myAppDemoWT" id="app"/>
+   <!-- <App > -->
+   <!-- <pages>
    <Page title="{i18n>appTitleText}">
    <content>
 			<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.HelloPanel"/>
       <mvc:XMLView viewName="sap.ui.demo.walkthrough.view.InvoiceList"/>
    </content>
    </Page>
-   </pages>
-   </App>
+   </pages> -->
+   <!-- </App> -->
    </Shell>
 
 </mvc:View>
