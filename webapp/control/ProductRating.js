@@ -9,6 +9,7 @@ sap.ui.define([
 //metadata defines the data structure and thus the API of the control
 		metadata : {
             properties : {
+				//hold the value that the user selected in the rating
 				value: 	{type : "float", defaultValue : 0}
 			},
 			aggregations : {
@@ -29,18 +30,19 @@ sap.ui.define([
 		init : function () {
 			this.setAggregation("_rating", new RatingIndicator({
 				value: this.getValue(),
-				iconSize: "2rem",
+				iconSize: "1.5rem",
 				visualMode: "Half",
 				liveChange: this._onRate.bind(this)
 			}));
 			this.setAggregation("_label", new Label({
-				text: "{i18n>productRatingLabelInitial}"
+				text: "{i18n>productRatingLabelInitial1}"
 			}).addStyleClass("sapUiSmallMargin"));
 			this.setAggregation("_button", new Button({
 				text: "{i18n>productRatingButton}",
 				press: this._onSubmit.bind(this)
 			}).addStyleClass("sapUiTinyMarginTopBottom"));
 		},
+		//The setValue is an overridden setter
         setValue: function (fValue) {
 			this.setProperty("value", fValue, true);
 			this.getAggregation("_rating").setValue(fValue);
