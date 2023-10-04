@@ -4,13 +4,13 @@
 		xmlns:mvc="sap.ui.core.mvc">
       <Panel accessibleRole="Region">
          <headerToolbar>
-            <Toolbar>
+            <!-- <Toolbar>
                <Title text="{i18n>invoiceListTitle}"/>
                <ToolbarSpacer/>
                <SearchField
                   width="50%"
                   search=".onFilterInvoices"/>
-            </Toolbar>
+            </Toolbar> -->
          </headerToolbar>
          <Table
          id="invoiceList"
